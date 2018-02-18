@@ -17,4 +17,10 @@ def email_filter
   read_contacts.select { |contact| contact[:email].include? '.org'}
 end
 
+def count_filter_phone
+  filter_phone.reduce(0) do |sum, element| ##???
+    sum += 1
+  end
+end
+
 puts email_filter
