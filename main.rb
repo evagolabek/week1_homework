@@ -18,9 +18,19 @@ def email_filter
 end
 
 def count_filter_phone
-  filter_phone.reduce(0) do |sum, element| ##???
+  phone_filter.reduce(0) do |sum, element| ##???
+    sum = sum + 1
+  end
+end
+
+#def count_test
+#  puts phone_filter.count
+#end
+
+def count_filter_email
+  email_filter.reduce(0) do |sum, element| ##???
     sum += 1
   end
 end
 
-puts email_filter
+puts count_filter_email
