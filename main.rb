@@ -13,5 +13,8 @@ def phone_filter
    read_contacts.select { |contact| contact[:phone].include? '+1'}
 end
 
+def email_filter
+  read_contacts.select { |contact| contact[:email].include? '.org'}
+end
 
-puts phone_filter
+puts email_filter
